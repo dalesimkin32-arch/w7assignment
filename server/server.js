@@ -76,6 +76,6 @@ app.listen(8080, () => {
 // https://github.com/Tech-Educators/software-dev-022/blob/main/demos/week04/09-database-monorepo-jokes-app/server/server.js
 // run command reminder: cd into my server and run node --watch server
 
-app.listen("8080", () => {
+/* app.listen("8080", () => {
   console.log(`Server running`);
-});
+});   */

@@ -1,0 +1,30 @@
+-- Create the table via Windows Copilot adjusted for primary key as previously recommended
+CREATE TABLE UsefulGenes (
+    gene_id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    gene_name VARCHAR(100),
+    application TEXT,
+    source_organism VARCHAR(100),
+    image_description TEXT,
+    image_url TEXT,
+    primary_article_url TEXT
+);
+
+-- Seed data with primary scientific article links
+INSERT INTO UsefulGenes (gene_name, application, source_organism, image_description, image_url, primary_article_url) VALUES
+('Bt (Cry1Ac)', 'Insect resistance in crops like cotton and corn', 'Bacillus thuringiensis', 'Bt cotton field showing pest resistance', 'https://mammoth.bio/2020/03/16/the-many-applications-of-genome-editing/', 'https://journals.plos.org/plospathogens/article?id=10.1371/journal.ppat.1008697'),
+('Golden Rice (psy, crtI)', 'Biofortification with provitamin A', 'Daffodil (psy), Pantoea ananatis (crtI)', 'Golden rice grains rich in beta-carotene', 'https://flexbooks.ck12.org/cbook/ck-12-biology-flexbook-2.0/section/3.14/primary/lesson/biotechnology-applications-bio/', 'https://www.nature.com/articles/nbt1082.pdf'),
+('TP53', 'Tumor suppression and cancer prevention', 'Humans', 'Diagram of TP53 pathway in cancer biology', 'https://www.cell.com/fulltext/S0092-8674(14)00604-7', 'https://onlinelibrary.wiley.com/doi/pdf/10.1111/joim.20106'),
+('BRCA1', 'DNA repair and breast/ovarian cancer risk assessment', 'Humans', 'Genetic screening for BRCA mutations', 'https://www.nature.com/articles/s41580-020-00288-9', 'https://www.frontiersin.org/journals/cell-and-developmental-biology/articles/10.3389/fcell.2022.813457/full'),
+('RD29A', 'Drought resistance in plants', 'Arabidopsis thaliana', 'Arabidopsis under drought stress', 'https://link.springer.com/article/10.1007/s00425-019-03099-1', 'https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2022.928718/full'),
+('GUS', 'Reporter gene for tracking gene expression', 'Escherichia coli', 'Blue staining in GUS assay', 'https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/genetic-engineering', 'https://www.nature.com/articles/342837a0.pdf'),
+('Cas9', 'Genome editing via CRISPR', 'Streptococcus pyogenes', 'CRISPR-Cas9 editing diagram', 'https://www.cell.com/fulltext/S0092-8674(14)00604-7', 'https://www.tandfonline.com/doi/pdf/10.1080/15476286.2019.1582974'),
+('HBB', 'Hemoglobin production; sickle cell disease therapy', 'Humans', 'Red blood cells affected by HBB mutation', 'https://www.nature.com/articles/s41467-021-21740-0', 'https://www.frontiersin.org/journals/hematology/articles/10.3389/frhem.2024.1468952/full'),
+('CFTR', 'Cystic fibrosis treatment', 'Humans', 'CFTR gene therapy concept', 'https://www.sciencedirect.com/science/article/pii/S002432052100895X', 'https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2021.639475/full'),
+('EPSPS', 'Herbicide resistance in crops', 'Agrobacterium sp.', 'Glyphosate-resistant soybean field', 'https://fastercapital.com/topics/applications-of-genetic-engineering-in-various-industries.html/1', 'https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2021.756116/full'),
+('Flavr Savr (polygalacturonase suppression)', 'Delayed ripening in tomatoes', 'Tomato (modified)', 'Flavr Savr tomato packaging', 'https://data-flair.training/blogs/biotechnology-applications/', 'https://journals.ashs.org/downloadpdf/view/journals/hortsci/43/3/article-p962.pdf'),
+('INS', 'Insulin production for diabetes treatment', 'Humans (expressed in E. coli)', 'Recombinant insulin vial', 'https://fastercapital.com/topics/applications-of-genetic-engineering-in-medicine.html/1', 'https://link.springer.com/article/10.1007/s10989-025-10727-w'),
+('LEA', 'Desiccation tolerance in seeds', 'Plants (various)', 'Seed preservation under dry conditions', 'https://www.mdpi.com/2076-2607/13/3/599', 'https://link.springer.com/chapter/10.1007/978-94-015-8909-3_14'),
+('Cry2Ab', 'Insect resistance in cotton', 'Bacillus thuringiensis', 'Bt cotton protection against bollworms', 'https://www.darpa.mil/news/2017/safe-genes-toolkit', 'https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1005534'),
+('NPTII', 'Selectable marker for genetic transformation', 'Bacteria (neomycin phosphotransferase)', 'Transgenic plant selection using antibiotics', 'https://biotechsustainablematerials.biomedcentral.com/articles/10.1186/s44316-024-00005-y', 'https://www.nature.com/articles/nbt1293-1537.pdf');
+
+

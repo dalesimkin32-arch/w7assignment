@@ -1,6 +1,6 @@
 import GeneUpForm from "../components/GeneUpForm";
 
-export default function GenUpPage() {
+export default function GeneUpPage() {
   // fetch and display all Gene data
   // need to useEffect and useState
   // clear interval in the cleanup of our useEffect

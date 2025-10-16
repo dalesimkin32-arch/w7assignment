@@ -12,7 +12,7 @@ export default function GeneUpForm() {
   function handleSubmit(e) {
     e.preventDefault(); // stop page refreshing on form submit etc.
     // have the formData
-    fetch(`http://locahost:8080/geneUp`, {
+    fetch(`http://localhost:8080/usefulgenes`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

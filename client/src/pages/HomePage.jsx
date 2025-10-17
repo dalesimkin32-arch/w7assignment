@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import GeneNav from "../components/GeneNav";
 import Gene from "../components/Gene";
+import "./HomePage.css";
 import { Await } from "react-router";
 
 export default function HomePage() {
@@ -31,21 +32,22 @@ export default function HomePage() {
       <GeneNav />
       <h1>Gene Home</h1>
       {/* map through Genes and display */}
-
-      {genes.map((gene) => {
-        return (
-          <Gene
-            ListItem
-            key={gene.gene_id} // stops a warning message in console re no key item (not recommended- but can use index as gene is an array)
-            gene_name={gene.gene_name}
-            application={gene.application}
-            source_organism={gene.source_organism}
-            image_description={gene.image_description}
-            image_url={gene.image_url}
-            primary_article_url={gene.primary_article_url}
-          />
-        );
-      })}
+      <div className="Genes">
+        {genes.map((gene) => {
+          return (
+            <Gene
+              ListItem
+              key={gene.gene_id} // stops a warning message in console re no key item (not recommended- but can use index as gene is an array)
+              gene_name={gene.gene_name}
+              application={gene.application}
+              source_organism={gene.source_organism}
+              image_description={gene.image_description}
+              image_url={gene.image_url}
+              primary_article_url={gene.primary_article_url}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }

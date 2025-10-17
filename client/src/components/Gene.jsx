@@ -1,3 +1,5 @@
+import "./Gene.css";
+
 export default function Gene({
   gene_name,
   application,
@@ -7,8 +9,8 @@ export default function Gene({
   primary_article_url,
 }) {
   return (
-    <div className="geneCard">
-      <h3>Gene Name: {gene_name}</h3>
+    <div className="Gene">
+      <h4>Gene Name: {gene_name}</h4>
       <p>Where used: {application}</p>
       <p>Source Organism: {source_organism}</p>
       <figure>

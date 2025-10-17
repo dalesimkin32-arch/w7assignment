@@ -1,0 +1,7 @@
+.Genes {
+  display: grid;
+  grid-template-columns: 25% 25%;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+}

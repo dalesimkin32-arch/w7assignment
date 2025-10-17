@@ -17,7 +17,7 @@ const db = new pg.Pool({
 });
 // create / endpoint just to test
 app.get("/", (req, res) => {
-  res.status(200).json(`I am Groot, I am Groute!`);
+  res.status(200).json(`I am Groot, I am Groute!`); // was going to be just plant based genes - unlucky Groot!
 });
 
 // create end point that queries the database for 'posts' and returns them
@@ -58,6 +58,7 @@ app.post("/usefulgenes", async (req, res) => {
 });
 
 /* relevant data from DBase
+    gene_id                          - unique key from DB
     gene_name VARCHAR(100),
     application TEXT,
     source_organism VARCHAR(100),

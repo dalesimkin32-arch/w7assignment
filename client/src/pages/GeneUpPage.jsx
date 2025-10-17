@@ -1,14 +1,12 @@
 import GeneUpForm from "../components/GeneUpForm";
+import GeneNav from "../components/GeneNav";
 
 export default function GeneUpPage() {
-  // fetch and display all Gene data
-  // need to useEffect and useState
-  // clear interval in the cleanup of our useEffect
-  /* 4 reference -https://github.com/Tech-Educators/software-dev-022/blob/main/demos/week07/05-use-effect-advanced/src/components/Polling.jsx */
   return (
     <div>
+      <GeneNav />
+      <h1>Add a Gene to Gene Home</h1>
       <GeneUpForm />
-      {/* map through Genes and display */}
     </div>
   );
 }

@@ -11,7 +11,7 @@ export default function HomePage() {
 
   useEffect(() => {
     async function fetchData() {
-      const data = await fetch(`http://localhost:8080/usefulGenes`);
+      const data = await fetch(`https://w7assignment.onrender.com/usefulGenes`);
       const genesData = await data.json();
       setGenes(genesData);
     }

@@ -70,7 +70,7 @@ app.post("/usefulgenes", async (req, res) => {
 // app.listen()
 
 app.listen(8080, () => {
-  console.log("Server started on http://localhost:8080");
+  console.log("Server started on https://w7assignment.onrender.com");
 });
 
 // example of server as reminder:-

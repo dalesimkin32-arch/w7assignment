@@ -14,7 +14,7 @@ export default function GeneUpForm() {
   function handleSubmit(e) {
     e.preventDefault(); // stop page refreshing on form submit etc.
     // have the formData
-    fetch(`http://localhost:8080/usefulgenes`, {
+    fetch(`https://w7assignment.onrender.com/usefulgenes`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

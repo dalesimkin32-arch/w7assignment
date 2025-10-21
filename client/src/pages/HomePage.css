@@ -1,7 +1,20 @@
 .Genes {
   display: grid;
-  grid-template-columns: 25% 25%;
+  grid-template-columns: 25% 25% 25%;
   grid-auto-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
+  color: aliceblue;
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+  .Genes {
+    grid-template-columns: 45% 45%;
+  }
+}
+
+@media (width < 800px) {
+  .Genes {
+    grid-template-columns: 100%;
+  }
 }

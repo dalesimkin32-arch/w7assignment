@@ -14,7 +14,7 @@ export default function Gene({
       <p>Where used: {application}</p>
       <p>Source Organism: {source_organism}</p>
       <figure>
-        <title>Showing use in: {image_description}</title>
+        <figcaption>Showing use in: {image_description}</figcaption>
         <img src={image_url} alt={image_description} />
       </figure>
       <a target="_blank" href={primary_article_url}>

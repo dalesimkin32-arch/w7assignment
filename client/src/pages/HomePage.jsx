@@ -16,8 +16,8 @@ export default function HomePage() {
       const genesData = await data.json();
       setGenes(genesData);
     }
-    // run the fetchData function every 5 seconds
-    const intervalID = setInterval(fetchData, 5000);
+    // run the fetchData function every 5 seconds 5s a bit too long settled on 1s
+    const intervalID = setInterval(fetchData, 1000);
 
     // clear interval in the cleanup of our useEffect
     return function () {

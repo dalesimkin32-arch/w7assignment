@@ -1,6 +1,7 @@
 /* import { useNavigate } from "react-router";  */
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import "./GeneUpForm.css";
 
 export default function GeneUpForm() {
   const [formData, setFormData] = useState();
@@ -33,46 +34,56 @@ export default function GeneUpForm() {
     >
       {/* have the input names here be the same as the columns in your database */}
       {/* <label>Genome Name</label> */}
-      <label>
-        Gene Name:
-        <input name="gene_name" label="Gene Name" onChange={handleChange} />
+      <label for="gname">
+        <h4>Gene Name:</h4>
       </label>
-      <label>
-        Application of Use for Gene:
-        <input
-          name="application"
-          label="Application of Use for Gene"
-          onChange={handleChange}
-        />
-      </label>
-      <label>
-        Source Organism of Gene:
-        <input
-          name="source_organism"
-          label="Source Organism of Gene"
-          onChange={handleChange}
-        />
-      </label>
-      <label>
-        Image of Use: Description:
-        <input
-          name="image_description"
-          label="Image of Use: Description"
-          onChange={handleChange}
-        />
-      </label>
-      <label>
-        Image of Use:
-        <input name="image_url" label="Image of Use" onChange={handleChange} />
-      </label>
-      <label>
-        Link to primary research article:
-        <input
-          name="primary_article_url"
-          label="Link to primary research article"
-          onChange={handleChange}
-        />
-      </label>
+      <input
+        id="gname"
+        name="gene_name"
+        placeholder="Gene Name"
+        onChange={handleChange}
+      />
+
+      <label for="appl">Application of Use for Gene:</label>
+      <input
+        id="appl"
+        name="application"
+        placeholder="Application of Use for Gene"
+        onChange={handleChange}
+      />
+
+      <label for="srcorg">Source Organism of Gene:</label>
+      <input
+        id="scrorg"
+        name="source_organism"
+        placeholder="Source Organism of Gene"
+        onChange={handleChange}
+      />
+
+      <label for="idesc">Image of Use: Description:</label>
+      <input
+        id="idesc"
+        name="image_description"
+        placeholder="Image of Use: Description"
+        onChange={handleChange}
+      />
+
+      <label for="iurl">Image of Use:</label>
+      <input
+        id="iurl"
+        name="image_url"
+        placeholder="Link to Image of Use"
+        onChange={handleChange}
+      />
+
+      <label for="priart">Link to primary research article:</label>
+      <input
+        id="priart"
+        name="primary_article_url"
+        placeholder="Link to primary research article"
+        onChange={handleChange}
+      />
+
       <button type="submit">Submit</button>
     </form>
   );
